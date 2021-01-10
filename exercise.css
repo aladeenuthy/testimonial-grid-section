@@ -1,0 +1,147 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+*/
+*{
+ padding:  0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+ min-height: 100vh;
+ background-color:  hsl(210, 46%, 95%);
+ font-size: 12px;
+ font-family: 'Barlow Semi Condensed', sans-serif;
+ color: hsla(0, 3%, 15%, 0.918);
+}
+img{
+ height: 28px;
+ border-radius: 50%;
+ float: left;
+ margin-right: 10px;
+}
+h2{
+ margin-top: 20px;
+}
+.container{
+position: relative;
+top: 42px;
+ width: 85%;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: 1fr 1fr;
+ column-gap: 15px;
+ row-gap: 15px;
+ grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+ height: 80vh;
+
+}
+.item{
+ border-radius: 11px;
+ padding-top: 20px;
+ padding-bottom: 30px;
+ box-shadow: 5px 0px 20px lightgray;
+}
+.daniel{
+ background-image: url("images/bg-pattern-quotation.svg");
+ background-repeat: no-repeat;
+
+background-position: 80% top;
+ background-color:  hsl(263, 55%, 52%);
+ grid-area: daniel;
+ color: hsl(0, 0%, 100%) ;
+  
+}
+.jonathan{
+ background-color: hsl(217, 19%, 35%) ;
+ grid-area: jonathan;
+ color: hsl(0, 0%, 100%) ;
+
+}
+.jeanette{
+ background-color:  hsl(0, 0%, 100%);
+ grid-area: jeanette;
+ 
+}
+.kira{
+ background-color:  hsl(0, 0%, 100%);
+ grid-area: kira;
+
+}
+.patrick{
+ background-color: hsl(219, 29%, 14%);
+ grid-area: patrick;
+ color: hsl(0, 0%, 100%) ;
+ padding-bottom: 30px;
+ 
+}
+.patrick img, .daniel img{
+ border: solid purple 2px;
+}
+.content{
+ width: 91%;
+ margin: 0 auto;
+}
+p span{
+ display: inline-block;
+}
+.content p:last-of-type{
+ margin-top: 10px;
+ line-height: 1.4;
+ color: hsl(0, 0%, 70%) ;
+}
+
+p span:last-of-type{
+ color: hsl(0, 0%, 70%) ;
+ margin-top: 2px;
+}
+
+@media screen and (max-width: 700px){
+ .container{
+ display: flex;
+ flex-direction: column;
+ }
+ body{
+  font-size: 13px;
+ }
+ 
+}
